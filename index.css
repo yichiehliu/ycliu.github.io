@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-size: 16px;
     padding-top: 100px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Inter',sans-serif;
 }
 
 a {
@@ -194,6 +194,7 @@ a:hover {
     background-image: url(resized_image/sky-me.jpg);
     background-position: bottom;
     background-size: cover;
+    
     padding-bottom: 43%;
     margin-top: -50px;
 }
@@ -212,18 +213,155 @@ a:hover {
 
 /* title */
 .title-underline {
-    
+    width: 187px;
+    height: 9px;
+    background: #FADA3B;
 }
+
+
 
 /* Projects */
 
 .projects {
+    position: relative;
+    width: 100%;
     background: linear-gradient(180deg, #EFEFF2 0%, #FAFAFB 100%);
+    display: flex;
+
+}
+
+.project-title {
+    position: absolute;
+    top: 8vw;
+    left: 4vw;
+    width: 22vw;
+}
+
+.project-title h3 {
+    font-size: 1.3vw;
+}
+
+.project-title h4 {
+    font-size: 2vw;
 }
 
 
+.projects-intro {
+    width:78vw;
+    margin-left: 35vw;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.project:nth-child(odd) {
+    margin-right: 6vw;
+}
+.project {
+    position: relative;
+
+    width: 26vw;
+    height: 42vw;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    
+    background-image: url(resized_image/tile-pattern.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    box-shadow: -0.4vw 0.1vw 5vw rgba(50,50,50,0.08);
+    margin-top: -4vw;
+    margin-bottom: 10vw;
+}
+
+.project>* {
+    /* margin: 0; */
+}
+
+
+.project-svg {
+    position: relative;
+    width: 150px;
+    height: 130px;
+    margin: 3vw 0;
+    border: 2px dashed #000000;
+    box-sizing: border-box; 
+}
+
+
+.p-svg-inner {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #F16E23 0%, #FABF3B 100%);
+}
+
+svg {
+    margin-top: 10%;
+    width: 80%;
+    height: 80%;
+    opacity: 0.9;
+    fill: #FFFFFF;
+}
+
+.p-text {
+    margin: 1.5vw 0;
+    padding: 0 2.1vw;
+}
+.p-text h3 {
+    font-size: 1.35vw;
+    line-height: 1.4vw;
+    margin-bottom: 0.8vw;
+}
+
+.p-text h4 {
+    margin: 0;
+    font-size: 1.2vw;
+    /* line-height: 1.9vw; */
+}
+.p-text p {
+    font-size: 1.1vw;
+    line-height: 1.8vw;
+
+}
+
+.p-text a {
+    position: absolute;
+    bottom: 3.5vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
 
 /* Internships */
+
+
+.intern-title {
+    margin: 0;
+    height: 500px;
+    color: #fff;
+    background: linear-gradient(235.39deg, #085981 0.83%, #053349 100%);
+    text-align: center;
+    position: relative;
+    /* padding: 14vw 6vw; */
+}
+
+.intern-title-text {
+    position: absolute;
+    /* display: flex; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 .internships {
     display: flex;
@@ -245,6 +383,11 @@ a:hover {
 
 .intern-pic {
     width: 100%;
+}
+
+.intern-pic:nth-child(1){
+    margin-top: 100px;
+
 }
 
 .intern-pic:not(:last-child) {
@@ -374,7 +517,7 @@ a:hover {
 }
 
 .form {
-    width: 70%;
+    /* width: 100%; */
     /* top: 50%; */
     font-family: 'Raleway';
     background: linear-gradient(30deg, #053349 -50%, #085981 80%);
@@ -391,10 +534,6 @@ a:hover {
 ::placeholder {
     /* Most modern browsers support this now. */
     color: #fff;
-}
-
-.ball-container {
-    display: flex;
 }
 
 input {
